@@ -50,6 +50,8 @@ def main():
     print "The file must be accessible by all spark workers"
     file_path = raw_input()
     run(master, support, file_path)
+    print "Press any key to exit"
+    exit = raw_input()
 def run(master, support, file_path):
     #Set up spark
     conf = SparkConf().setAppName("test").setMaster(master)
